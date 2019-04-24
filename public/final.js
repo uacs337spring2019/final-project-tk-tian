@@ -40,7 +40,7 @@ const message = {
 	},
    body: JSON.stringify(message)
 };
-let url="http://weathersearch4ua.herokuapp.com";
+let url="https://weathersearch4ua.herokuapp.com";
 fetch(url,fetchOptions)
 .then(checkStatus)
 .then(function(){
@@ -63,7 +63,7 @@ document.getElementById("table").innerHTML="";
 document.getElementById("specific").innerHTML="";
 let input=document.getElementById("cityname").value;
 console.log(input);
-let url="http://api.apixu.com/v1/current.json?key=131227c8ca1b49399da52945192204&q="+input;
+let url="https://api.apixu.com/v1/current.json?key=131227c8ca1b49399da52945192204&q="+input;
 fetch(url)
     .then(checkStatus)
     .then(function(responseText){
@@ -153,7 +153,7 @@ function specific(){
 let input=document.getElementById("cityname").value;
 document.getElementById("specific").innerHTML="";
 console.log(input);
-let url="http://api.apixu.com/v1/current.json?key=131227c8ca1b49399da52945192204&q="+input;
+let url="https://api.apixu.com/v1/current.json?key=131227c8ca1b49399da52945192204&q="+input;
 fetch(url)
     .then(checkStatus)
     .then(function(responseText){
@@ -242,7 +242,7 @@ fetch(url)
 */
 function history(){
 	document.getElementById("history").innerHTML = "";
-	let url="http://weathersearch4ua.herokuapp.com";
+	let url="https://weathersearch4ua.herokuapp.com";
 	fetch(url)
     .then(checkStatus)
     .then(function(responseText){
